@@ -29,15 +29,15 @@ def create_app(config_name):
     login_manager.init_app(app)
     mail.init_app(app)
 
-    # Registering the blueprint
-    # from .main import main as main_blueprint
-    # app.register_blueprint(main_blueprint)
+    Registering the blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
 
-    # from .auth import auth as auth_blueprint
-    # app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')
 
-    # confiure UploadSet
-    # configure_uploads(app,photos)
+    confiure UploadSet
+    configure_uploads(app,photos)
 
     return app
     
